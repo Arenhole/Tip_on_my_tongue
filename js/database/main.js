@@ -15,11 +15,11 @@ csv.parseStream(stream, {headers: true, delimiter: '\t'})
     .on('data', row => console.log(new BaseMot(row)))
     .on('end', rowcount => console.log(`Parsed ${rowcount} rows`));
 
-const mot = sequelize.define("BaseMot", {
+const mot = sequelize.define("LettreMot", {
         ID: {
                        type: DataTypes.STRING,
                        allowNull: false,
-                       primaryKay: true
+                       primaryKey: true
                        },
         lettreA: {
                        type: DataTypes.INTEGER,
