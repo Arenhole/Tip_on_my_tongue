@@ -1,7 +1,7 @@
 const fs = require('fs');
 const csv = require('@fast-csv/parse');
 const { sqlite } = require('sqlite3');
-const { BaseMot } = require('./Mot');
+const { BaseMot, LettreMot } = require('./Mot');
 
 const { Sequelize,DataTypes } = require('sequelize');
 const sequelize = new Sequelize({
