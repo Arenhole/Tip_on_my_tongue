@@ -48,12 +48,14 @@ class LettreMot {
         "ù" : 38,
         "û" : 39,
         "ü" : 40,
-        "ÿ" : 41
+        "ÿ" : 41,
+        " " : 42,
+        "-" : 43
     }
 
     constructor(mot){
         this.mot = mot;
-        this.lettres = Array.apply(null, Array(42)).map(e => 0);
+        this.lettres = Array.apply(null, Array(44)).map(e => 0);
         mot.split('').forEach(char => this.letters[LettreMot.customCharValues[char]] += 1);
     }
 }
