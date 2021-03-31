@@ -186,8 +186,8 @@ class DAO {
                 type: DataTypes.INTEGER,
                 allowNull: false,
             }
-        }
-    );
+        });
+
         this.lettreMot = sequelize.define("LettreMot", {
                 ID: {
                     type: DataTypes.STRING,
@@ -412,7 +412,12 @@ class DAO {
         }
         );
 
+        await this.lettreMot.sync({force : false});
+        await this.baseMot.sync({force : false});
 
+    }
 
+    async insererBaseMot(baseMot){
+        await this.baseMot.create(baseMot);
     }
 }
