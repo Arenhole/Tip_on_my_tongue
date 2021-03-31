@@ -2,6 +2,14 @@ class BaseMot {
     constructor(mot){
         Object.assign(this, mot);
     }
+
+    static parseBaseMot(object){
+        const toNumberize = ['freqlemfilms2','freqlemlivres','freqfilms2','freqlivres','nbhomogr','nbhomoph','islem',
+                            'nblettres','nbphons','voisorth','voisphon','puorth','puphon','nbsyll','deflem','defobs',
+                            'old20','pld20','nbmorph'];
+        toNumberize.forEach(elem => object[elem] = object[elem] != '' && Number(object[elem]) != NaN ? Number(object[elem] ): 0 );
+        return object;
+    }
 }
 
 class LettreMot {
