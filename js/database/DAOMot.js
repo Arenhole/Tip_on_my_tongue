@@ -132,7 +132,7 @@ class DAO {
                 allowNull: false,
             },
 
-            cv-cv: {
+            cv_cv: {
                 type: DataTypes.STRING,
                 allowNull: false,
             },
